@@ -17,6 +17,7 @@ namespace ChatBot
             cmd.Parameters.AddWithValue("@id", monitorid);
             try
             {
+                var cmd = createCommand(query);
                 cmd.Connection.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
